@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Boilerplate</title>
+    <meta name="description" content="">
+    <meta name="author" content="Reggie Hillier">
+    <meta name="keywords" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="">
+    <link rel="icon" href="" type="">
+    <link rel="apple-touch-icon" href="">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="centreText centreVertically">
+            <h2>Pixel Grid</h2>
+            <p>Select pixel and enter colour in the inputs below</p>
+        </div> 
+        <!-- title for drawing? and other info, save? -->
+    </header>
+
+    <div class="pGrid unselectable">
+        <div class="row">
+            <div class="pixel" id="r1cA"></div>
+            <div class="pixel" id="r1cB"></div>
+        </div>
+        <div class="row">
+            <div class="pixel" id="r2cA"></div>
+            <div class="pixel" id="r2cB"></div>
+        </div>
+    </div>
+
+    <div class="settings hide">
+        <input id="newRowNumber" type="text" placeholder="Enter desired rows here">
+        <input id="newColumnNumber" type="text" placeholder="Enter desired columns here">
+        <button id="confirmGridSettings">Confirm new grid size</button><br><!-- make it more intuitive to not automatically click confirm when changing other settings, perhaps hide this button until both fields are valid, catch try? -->
+        <form>
+            <!-- <input type="checkbox" id="colourAuto" name="colourAuto"><label for="colourAuto"> Colour Selection Auto Fill</label><br> -->
+            <input type="checkbox" id="colourSelection" name="colourSelection" checked="true"><label for="colourSelection"> Colour Selection Input </label><br>
+            <input type="checkbox" id="gridCoords" name="gridCoords" checked="true"><label for="gridCoords"> Grid Coords </label><br>
+            <input type="checkbox" id="recentColours" name="recentColours" checked="true"><label for="recentColours"> Recent Colour Boxes </label><br>
+            <input type="checkbox" id="setAllOption" name="setAllOption"><label for="setAllOption"> Set All Pixels </label>
+        </form>  
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <div>
+            <div class="recentColours">
+                <!-- <div id="recentColour1"></div>
+                <div id="recentColour2"></div>
+                <div id="recentColour3"></div>
+                <div id="recentColour4"></div>
+                <div id="recentColour5"></div> -->
+            </div>
+            <input id="newColour" type="color">
+            <input id="coords" type="text" placeholder="Enter square here"><!-- make adjustable for smaller -->
+            <button id="confirmBtn">Confirm</button>
+            <input id="setAll" class="hide" type="checkbox"><label for="setAll" class="hide" id="setAllLabel">Set All</label>
+            <!-- preset colours that you can click on  -->   
+            <button id="settingsBtn">Settings</button>    
+        </div>
+    </footer>
+    <!-- also responsiveness of footer on smaller screens -->
+    <!-- save function? upload from file? -->
+    <!-- create tic tac toe version? -->
+    <!-- set all when creating?(set canvas to colour) -->
+</body>
+
+</html>
+<!-- Use tailwind or other css library ? -->
+<!-- catch errors -->
